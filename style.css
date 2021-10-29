@@ -1,3 +1,45 @@
-#root {
-  color: red;
+body {
+    background-color: whitesmoke;
 }
+
+img{
+  width: 300px;
+  object-fit: :contain;
+}
+#root {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ border: 3px solid navy;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(10, 10, 10, 0.918);
+}
+
+ .card-container {
+     box-shadow: 0px 8px 7px 8px rgba(0, 0, 0, 0.35);
+     width: 400px;
+     height: 550px;
+     color: rgb(184, 185, 183);
+     border-radius: 15px;
+     text-align: center;
+ }
+  .card-container>div {
+     padding: 0 20px;
+ }
+ 
+ .card-container>div>p {
+     text-align: left;
+ }
+ 
+ .card-container>h1 {
+     border: 2px solid black;
+     padding: 25px;
+     border-radius: 15px;
+     color: black;
+     font-size: 20px;
+     text-align: center;
+ }
+ 

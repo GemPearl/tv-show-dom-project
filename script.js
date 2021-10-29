@@ -7,58 +7,53 @@ Minimal features
 - You should combine season number and episode number into an episode 
 -Your page should state somewhere that the data has(originally) come from TVMaze.com, and link back to that site (or the specific episode on that site). 
 */
+//Global Declaration 
+
+  const searchBar = document.getElementById("searchBar");
+  const allEpisodes = getAllEpisodes();
+  const container = document.getElementById("container");
 
 function setup() {
-  const allEpisodes = getAllEpisodes();
   makePageForEpisodes(allEpisodes);
 }
 
-function makePageForEpisodes(episodeList) {
+ function zeroPadded(episodeCode) {
+  return episodeCode.toString().padStart(2, 0);
+ }
 
-  // To get episode numbers
-  //const rootElem = document.getElementById("root");
-  //rootElem.textContent = `Got ${episodeList.length} episode(s)`;
-  //rootElem.innerHTML = "";
-  
-  // const container = document.getElementById("container");
- 
-  
-  episodeList.forEach(episode => {
-     const { image, name, number, season, summary } = episode;
-     
-     container.innerHTML += `<div><h2>${episode.name} - S${zeroPadded(episode.season)} E${zeroPadded(episode.number)} </h2>
+function helperMarkup (episode) {
+  const markUp = `<div><h2>${episode.name} - S${zeroPadded(episode.season
+    )} E${zeroPadded(episode.number)}</h2>
     <img src= "${episode.image.medium}" alt "">${episode.summary}</div>`;
-
-
- 
-
-  const h1 = document.createElement("h1");
-  container.appendChild(h1);
-
-  const img = document.createElement("img");
-  img.setAttribute("src", image.original);
-  container.appendChild(img);
-
-  const summaryContainer = document.createElement("div")
-  summaryContainer.innerHTML = summary;
-  container.appendChild(summaryContainer);
-
-  // 
- 
-
-  //h1.innerHTML = `${name}-S0${season}-E0${number}`;
-
-  const container = document.createElement("div");
-  div.appendChild(container);
-  container.classList.add("card-container");
-
-  function zeroPadded(episodeCode) {
-  return episodeCode.toString().padStart(2, 0); 
- 
+    
+    return markUp;
 }
-})
-};
 
- rootElem.appendChild(div);
- 
+function makePageForEpisodes(episodeList) {
+  const innerHTMLArray = [];
+  episodeList.forEach((episode) => {
+    innerHTMLArray.push(helperMarkup(episode));
+  });
+  container.innerHTML = innerHTMLArray;
+}
+
+
+function searchCreation(e){
+
+  let searchString = e.target.value.toLowerCase();
+
+  let filteredInput = allEpisodes.filter((char) => { 
+    return (
+      char.name.toLowerCase().includes(searchString) ||
+      
+      char.summary.toLowerCase().includes(searchString)
+        );
+      });
+      
+      container.innerHTML = "";
+      makePageForEpisodes(filteredInput);
+}
+
+searchBar.addEventListener("input", searchCreation);
+
 window.onload = setup;

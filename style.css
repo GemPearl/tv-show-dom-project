@@ -1,43 +1,113 @@
-body {
-    background-color: whitesmoke;
-}
-
-img{
-  width: 300px;
-  object-fit: :contain;
-}
-
-h1 {
-    text-align: center;
-    color: rgba(10, 10, 10, 0.918);
-}
-
-
-searchWrapper{
-  margin-top: 1.3em;
-  border-radius: 4px;
-  height: 30px;
-  width: 30%;
-}
-
-#container {
-  background-color: rgb(148,216,228);
-  border: 3px solid rgb(2, 32, 37)
- }
-  /* .card-container>div {
-     padding: 0 20px;
- }
- 
- .card-container>div>p {
-     text-align: left;
- }
- 
- .card-container>h1 {
-     border: 2px solid black;
-     padding: 25px;
-     border-radius: 15px;
-     color: black;
-     font-size: 20px;
-     text-align: center;
- } */
- 
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                background-color: whitesmoke;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            .root {
+                color: white;
+                width: 100 % display: flex;
+                flex-direction: colum;
+            }
+            
+            .card {
+                background-color: goldenrod;
+                display: block;
+                /* check other type of display and decide on the best*/
+                margin: 40px auto;
+                border-style: groove;
+            }
+            
+            .mainHeading {
+                font-size: 50px;
+            }
+            
+            .nrOfEp {
+                text-align: center;
+                font-size: 20px;
+                margin: 20px;
+            }
+            
+            .imageDiv {
+                width: 35%;
+            }
+            
+            .textDiv {
+                width: 65%;
+                margin-left: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .episodeInfo {
+                color: yellow;
+                font-size: 18px;
+                margin: 10px 50px 20px 0;
+            }
+            
+            #runtime {
+                font-size: 15px;
+            }
+            
+            .info {
+                display: flex;
+                align-items: baseline;
+            }
+            
+            .episodeName {
+                font-size: 23px;
+                margin: 20px 0 0 0;
+                text-shadow: 1px 1px 1px white;
+            }
+            
+            .description {
+                font-size: 18px;
+                margin: 20px 20px 20px 0;
+                text-align: justify;
+            }
+            
+            footer {
+                background-color: #2C2C2C;
+                color: white;
+                margin: 0;
+                padding: 50px;
+                text-align: center;
+                font-size: 15px;
+            }
+            
+            a {
+                margin: 0 20px 20px auto;
+            }
+            
+            .button {
+                border: 1px solid yellow;
+                background-color: #2C2C2C;
+                box-shadow: 1px 1px 1px yellow;
+                color: yellow;
+                padding: 10px 15px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            
+            .button:hover {
+                color: black;
+                background-color: yellow;
+            }
+            
+            .searchInput {
+                align-items: center;
+                margin: 20px auto;
+                padding: 10px;
+                background-color: #2C2C2C;
+                color: yellow
+            }

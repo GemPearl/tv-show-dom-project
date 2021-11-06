@@ -37,7 +37,11 @@ const TVShowApi = 'https://api.tvmaze.com/shows/82/episodes';
 
 const SEARCH_API = 'https://api.tvmaze.com//search/shows?&q=SEARCH_QUERY';
 
-let allEpisodes = [];;
+let allEpisodes = [];
+
+function displayEpisodesCards() {
+    let displayEpisodesCards = document.createElement("div");
+};
 
 function setup() {
     fetch(TVShowApi).then(function(response) {
@@ -86,7 +90,7 @@ function makePageForEpisodes(episodeList) {
 
     //Create Cards
     episodeList.map((episode) => {
-        let card = document.createElement("div");
+        //let card = document.createElement("div");
         card.classList("card");
         episode.appendChild(card); // check with Episodes or episode  ??
 
@@ -120,15 +124,14 @@ function makePageForEpisodes(episodeList) {
         textContainer.appendChild(summary);
 
         //Information
-        let info = docume
-            .createElement("div");
+        let info = document.createElement("div");
         info.classList("info");
         textContainer.appendChild(info);
 
         //Episode Season number
         let episodeSeasonNumber = document.createAttribute("p");
         episodeSeasonNumber.classList.add("episodeInformation");
-        episodeSeasonNumber.innerHTML = formatEpiosdeAndSeason(episode.season, episode.number);
+        episodeSeasonNumber.innerHTML = formatEpisodeAndSeason(episode.season, episode.number);
         info.appendChild(episodeSeasonNumber);
 
         //Duration
@@ -151,7 +154,7 @@ function makePageForEpisodes(episodeList) {
 
 }
 // Format Season with Zero Padding 
-function formatEpiosdeAndSeason(season, episode) {
+function formatEpisodeAndSeason(season, episode) {
     if (parseInt(season) < 10) {
         seasonNumber = `S0${season}`;
     } else {
@@ -169,7 +172,7 @@ function formatEpiosdeAndSeason(season, episode) {
 //Footer
 let footer = document.createElement("footer");
 document.body.appendChild(footer);
-let copyright = document.createElement("p");
+let copyRight = document.createElement("p");
 footer.appendChild(copyRight);
 copyRight.innerHTML = "Copyright of these TV shows belong to <a href='https://www.tvmaze.com/'>TVMaze.com</a>";
 

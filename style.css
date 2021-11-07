@@ -1,3 +1,43 @@
-#root {
-    color: red;
-}
+    #root {
+        color: rgb(39, 35, 35);
+        background-color: rgb(241, 185, 101);
+    }
+    
+    #intro-main {}
+    
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    . html {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: rgb(231, 157, 130);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        front-size: 2rem;
+    }
+    
+    .format {
+        border: 5px solid rgba(192, 112, 112, 0.13);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        max-width: 400px;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }

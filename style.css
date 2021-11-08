@@ -1,11 +1,11 @@
     #root {
-        color: rgb(39, 35, 35);
-        background-color: rgb(241, 185, 101);
+        text-align: center;
     }
     
     #intro-main {}
     
     h1 {
+        color: black;
         text-align: center;
         font-size: 3rem;
         margin-top: 1rem;
@@ -17,7 +17,7 @@
     }
     
     body {
-        background-color: rgb(231, 157, 130);
+        background-color: #98f5ff;
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -26,7 +26,7 @@
     }
     
     .format {
-        border: 5px solid rgba(192, 112, 112, 0.13);
+        border: 5px solid #008b8b;
         margin: auto;
         display: flex;
         flex-direction: column;

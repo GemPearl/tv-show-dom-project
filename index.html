@@ -7,37 +7,50 @@
     <title>TV Show Project | Nonye (GemPearl)</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
 </head>
 
 <body>
-    <div id="intro-main">
-        <header class="Project-Title">
-            <h1> TV Shows on Demand</h1>
-        </header>
+    <h1> TV Shows on Demand</h1>
+    <div class="container">
+        <div id="search-wrapper">
+            <label id="selector">
+            <select id="show-dropdown" name="listed-shows">
+            <option value="all">All Shows</option>
+            </select>
+            </label>
+
+            <button type="button" class="btn btn-primary" id="button">
+            Return to All Shows
+            </button>
+
+            <input id="searchBar" type="text" name="searchBar" placeholder="Search" />
+
+            <input id="searchShow" type="text" name="searchBar" placeholder="Search" />
+            <p id="display-text"></p>
+        </div>
     </div>
+    <div id="main-container" class="container"></div>
 
-    <div id="root">
-    </div>
+    <footer class="copyright ">
 
-    <!--  <main>
-        <article class="episodeCard">
-            <section id="episodeTitle"></section>
-            <section class="img-preview"></section>
-            <section class="summary"></section>
-        </article> 
-
-    </main> -->
-    <footer class="copyright">
-
-        <p> TV Shows were imported from
-            <a href="https://tvmaze.com/" target="_blank"> TVMaze</a>
+        <p> &copy; TV Shows were imported from
+            <a href="https://tvmaze.com/ " target="_blank "> TVMaze.com</a>
         </p>
     </footer>
+
+
+
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src=" episodes.js "></script>
-
+    <script src="shows.js ">
+    </script>
     <!-- Loads YOUR javascript code -->
-    <script src="script.js "></script>
+    <script src="script.js ">
+    </script>
+
+
 </body>
 
 </html>

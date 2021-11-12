@@ -1,3 +1,124 @@
-#root {
-  color: red;
+body {
+    background-color: #98f5ff;
+    //align-items: center;
+    //justify-content: center;
+    //flex-direction: column;
+    margin: 0;
+    front-size: 2rem;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    text-align: center;
+    border: 1px solid;
+    font-size: 1.5rem;
+    padding: 10px;
+    box-shadow: inset rgb(132, 235, 235) 5px 10px 20px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+img {
+    width: auto;
+}
+
+#search-wrapper {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(7, 108, 126);
+    color: whitesmoke;
+}
+
+button {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(5, 4, 2);
+    color: rgb(65, 176, 196);
+}
+
+input {
+    font -size: 1.2rem;
+}
+
+select {
+    font-size: 1.2rem;
+}
+
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.episode-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 25%;
+    border: 3px solid grey;
+    border-radius: 6px;
+    padding: 1.2rem;
+    margin: 1rem auto;
+    text-align: justify;
+    background-color: #043958;
+    color: rgba(3, 14, 77, 0.603);
+}
+
+.show-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    margin: 1rem auto;
+    border: 3px solid rgb(7, 105, 151);
+    border-radius: 6px;
+    background-color: #9ad8e0;
+    color: rgb(10, 9, 82);
+    cursor: pointer;
+}
+
+.show-container h2 {
+    width: 100%;
+}
+
+.show-container img {
+    width: 15%;
+    margin-bottom: 1rem;
+}
+
+.show-summary {
+    width: 57%;
+    text-align: justify;
+}
+
+#display-text {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.ratings {
+    border-radius: 6px;
+    border: solid;
+    padding: 0.5rem;
+    width: 20%;
+    background-color: transparent;
 }
